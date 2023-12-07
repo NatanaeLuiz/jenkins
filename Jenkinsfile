@@ -7,5 +7,17 @@ pipeline{
                 bat('mvn clean package -DskipTests=true')
             }
         }
+        stage('Testes'){
+            steps{
+                sleep(3)
+                bat('mvn test')
+            }
+        }
+        stage('Fim'){
+            steps{
+                sleep(5)
+                bat('echo fim')
+            }
+        }
     }
 };
