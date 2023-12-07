@@ -18,22 +18,22 @@ public class CalculadoraController {
     }
 
     @GetMapping("/somar/{a}/{b}")
-    public int somar(@PathVariable int a, int b){
+    public int somar(@PathVariable int a, @PathVariable int b){
         return calculadoraService.somar(a, b);
     }
 
     @GetMapping("/subtrair/{a}/{b}")
-    public int subtrair(@PathVariable int a, int b){
+    public int subtrair(@PathVariable int a, @PathVariable int b){
         return calculadoraService.subtrair(a, b);
     }
 
     @GetMapping("/multiplicar/{a}/{b}")
-    public int multiplicar(@PathVariable int a, int b){
+    public int multiplicar(@PathVariable int a, @PathVariable int b){
         return calculadoraService.multiplicar(a, b);
     }
 
     @GetMapping("/dividir/{a}/{b}")
-    public int dividir(@PathVariable int a, int b){
+    public int dividir(@PathVariable int a, @PathVariable int b){
         return calculadoraService.dividir(a, b);
     }
 
